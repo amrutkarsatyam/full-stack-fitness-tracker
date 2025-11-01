@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Neo-Brutalism Fitness</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="auth-form neo-card">
+    <h1>Login</h1>
+    <form id="login-form">
+      <input 
+        type="text" 
+        id="login-username" 
+        class="neo-input" 
+        placeholder="Username"
+        required
+      >
+      <input 
+        type="password" 
+        id="login-password" 
+        class="neo-input" 
+        placeholder="Password"
+        required
+      >
+      <button type="submit" class="neo-button">Login</button>
+    </form>
+    <p id="error-message"></p>
+    <p style="margin-top: 1rem; font-size: 0.9rem;">Demo: user / pass</p>
+  </div>
+  <script src="js/auth.js" type="module"></script>
+</body>
+</html>

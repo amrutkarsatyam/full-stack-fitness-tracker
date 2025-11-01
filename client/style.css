@@ -1,0 +1,225 @@
+/* CSS Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styles */
+body {
+  font-family: 'Arial Black', 'Helvetica', sans-serif;
+  background-color: #FFFFFF;
+  color: #000000;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* App Container */
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Neo-Brutalism Card */
+.neo-card {
+  background: #FFFFFF;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  box-shadow: 5px 5px 0px #000000;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Neo-Brutalism Button */
+.neo-button {
+  background: #FFFF00;
+  color: #000000;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  box-shadow: 5px 5px 0px #000000;
+  padding: 0.75rem 1.5rem;
+  font-family: 'Arial Black', 'Helvetica', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  font-size: 16px;
+}
+
+.neo-button:hover {
+  background: #FFFF33;
+}
+
+.neo-button:active {
+  box-shadow: 0 0 0px #000000;
+  transform: translate(5px, 5px);
+}
+
+/* Small Button Variant */
+.neo-button-sml {
+  background: #FFFF00;
+  color: #000000;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  box-shadow: 3px 3px 0px #000000;
+  padding: 0.5rem 1rem;
+  font-family: 'Arial Black', 'Helvetica', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  font-size: 14px;
+}
+
+.neo-button-sml:hover {
+  background: #FFFF33;
+}
+
+.neo-button-sml:active {
+  box-shadow: 0 0 0px #000000;
+  transform: translate(3px, 3px);
+}
+
+/* Neo-Brutalism Input */
+.neo-input {
+  background: #FFFFFF;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  padding: 0.75rem;
+  font-family: 'Arial Black', 'Helvetica', sans-serif;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.neo-input:focus {
+  outline: none;
+  border-color: #FFFF00;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFFFFF;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  box-shadow: 5px 5px 0px #000000;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-link {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.navbar-link:hover {
+  background: #FFFF00;
+}
+
+.navbar-link.active {
+  background: #FFFF00;
+}
+
+/* Auth Form */
+.auth-form {
+  max-width: 400px;
+  margin: 100px auto;
+}
+
+.auth-form h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.auth-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* List Item Card */
+.list-item-card {
+  background: #FFFFFF;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  box-shadow: 5px 5px 0px #000000;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item-content {
+  flex: 1;
+}
+
+.list-item-content strong {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.list-item-content p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+/* Tracker Layout */
+.tracker-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .tracker-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .navbar-links {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .navbar-link {
+    text-align: center;
+  }
+}
+
+/* Error Message */
+#error-message {
+  color: red;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/* Chart Container */
+canvas {
+  max-height: 400px;
+}

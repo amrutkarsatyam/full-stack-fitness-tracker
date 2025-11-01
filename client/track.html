@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track - Neo-Brutalism Fitness</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <nav class="navbar" id="navbar"></nav>
+    
+    <div class="tracker-layout">
+      <!-- Workout Column -->
+      <div>
+        <h1>Workouts</h1>
+        
+        <form id="workout-form" class="neo-card">
+          <h2>Add Workout</h2>
+          <input 
+            type="text" 
+            id="exerciseName" 
+            class="neo-input" 
+            placeholder="Exercise Name"
+            required
+          >
+          <input 
+            type="number" 
+            id="sets" 
+            class="neo-input" 
+            placeholder="Sets"
+            required
+          >
+          <input 
+            type="number" 
+            id="reps" 
+            class="neo-input" 
+            placeholder="Reps"
+            required
+          >
+          <input 
+            type="number" 
+            id="weight" 
+            class="neo-input" 
+            placeholder="Weight (lbs)"
+            step="0.1"
+            required
+          >
+          <button type="submit" class="neo-button">Add Workout</button>
+        </form>
+        
+        <h2>History</h2>
+        <div id="workout-list"></div>
+      </div>
+      
+      <!-- Nutrition Column -->
+      <div>
+        <h1>Nutrition</h1>
+        
+        <form id="nutrition-form" class="neo-card">
+          <h2>Add Meal</h2>
+          <input 
+            type="text" 
+            id="mealDescription" 
+            class="neo-input" 
+            placeholder="Meal Description"
+            required
+          >
+          <input 
+            type="number" 
+            id="calories" 
+            class="neo-input" 
+            placeholder="Calories"
+            required
+          >
+          <button type="submit" class="neo-button">Add Meal</button>
+        </form>
+        
+        <h2>History</h2>
+        <div id="nutrition-list"></div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="js/track.js" type="module"></script>
+</body>
+</html>
