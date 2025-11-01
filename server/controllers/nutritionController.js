@@ -1,3 +1,4 @@
+// server/controllers/nutritionController.js
 import { db } from '../store.js';
 
 // Get all meals (sorted by date, newest first)
@@ -9,14 +10,14 @@ export const getMeals = (req, res) => {
 // Add a new meal
 export const addMeal = (req, res) => {
   const { mealDescription, calories } = req.body;
-  
+
   const newMeal = {
     id: Date.now(),
     mealDescription,
-    calories: parseInt(calories),
+    calories: parseInt(calories, 10) || 0,
     date: new Date()
   };
-  
+
   db.meals.push(newMeal);
   res.status(201).json(newMeal);
 };
@@ -24,8 +25,8 @@ export const addMeal = (req, res) => {
 // Delete a meal
 export const deleteMeal = (req, res) => {
   const { id } = req.params;
-  const mealId = parseInt(id);
-  
+  const mealId = parseInt(id, 10);
+
   db.meals = db.meals.filter(meal => meal.id !== mealId);
   res.status(200).json({ message: 'Meal deleted successfully' });
 };

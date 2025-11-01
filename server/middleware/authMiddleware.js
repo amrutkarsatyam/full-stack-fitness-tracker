@@ -1,10 +1,6 @@
-// Dummy authentication middleware
+// server/middleware/authMiddleware.js
 export const dummyProtect = (req, res, next) => {
-  const authHeader = req.headers.authorization;
-  
-  if (authHeader && authHeader === 'Bearer dummy-token') {
-    next();
-  } else {
-    res.status(401).json({ message: 'Unauthorized - Invalid or missing token' });
-  }
+  // accept any "Authorization" header or even none at all
+  req.user = { id: 1, name: 'Test User' };
+  next();
 };

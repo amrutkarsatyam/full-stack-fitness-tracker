@@ -1,9 +1,15 @@
+// server/routes/nutritionRoutes.js
 import express from 'express';
-import { loginUser, signupUser } from '../controllers/authController.js';
+import { getMeals, addMeal, deleteMeal } from '../controllers/nutritionController.js';
+import { dummyProtect } from '../middleware/authMiddleware.js';
 
 const router = express.Router();
 
-router.post('/login', loginUser);
-router.post('/signup', signupUser);
+// protect nutrition endpoints
+router.use(dummyProtect);
+
+router.get('/', getMeals);
+router.post('/', addMeal);
+router.delete('/:id', deleteMeal);
 
 export default router;
