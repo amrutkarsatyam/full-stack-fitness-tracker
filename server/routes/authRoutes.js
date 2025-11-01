@@ -1,15 +1,15 @@
 // server/routes/authRoutes.js
 import express from 'express';
+// Import your controller functions
+import { loginUser, signupUser } from '../controllers/authController.js';
 
 const router = express.Router();
 
-// open login: always success, returns fake token
-router.post('/login', (req, res) => {
-  res.status(200).json({
-    token: 'fake-token',
-    message: 'Logged in successfully (dummy mode)',
-  });
-});
+// Use the controller function for login
+router.post('/login', loginUser);
+
+// (Optional but good practice) Wire up the signup controller too
+router.post('/signup', signupUser);
 
 // optional logout route
 router.post('/logout', (req, res) => {
